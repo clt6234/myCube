@@ -5,22 +5,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class HomePage extends AppCompatActivity {
+public class cubeScrambler extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+
+        // Get scrambled moves list
+        Intent intent = getIntent();
+        String message = "You pressed scramble";
+
+        // Create the text view
+        TextView textView = new TextView(this);
+        textView.setTextSize(40);
+        textView.setText(message);
+
+        // Set the text view as the activity layout
+        setContentView(textView);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home_page, menu);
+        getMenuInflater().inflate(R.menu.menu_cube_scrambler, menu);
         return true;
     }
 
@@ -37,14 +47,5 @@ public class HomePage extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * scramble - Called when the user clicks the scramble button.
-     */
-    public void scramble(View view) {
-        // Return the scrambled list
-        Intent intent = new Intent(this, cubeScrambler.class);
-        startActivity(intent);
     }
 }

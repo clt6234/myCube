@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">myCube</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="welcome">Welcome to myCube, this is a work in
+    progress and any feedback you can give me would be greatly
+    appreciated. Let me know what you would like to see from the
+    application, and the things you either like or dislike.
+    Thanks, Carl Twyman</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_cube_scrambler">cubeScrambler</string>
 </resources>
