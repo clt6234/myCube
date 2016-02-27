@@ -43,7 +43,7 @@ public class HomePage extends AppCompatActivity {
      * scramble - Called when the user clicks the scramble button.
      */
     public void scramble(View view) {
-        // Return the scrambled list
+        // Return the scrambled list Testing for Ron
         Intent intent = new Intent(this, cubeScrambler.class);
         startActivity(intent);
     }
